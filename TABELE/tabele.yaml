@@ -1,0 +1,189 @@
+tabele:
+  wspolne_pola:
+    opis_prac_checkboxy:
+      - "8-godzinny dzień pracy. Pracownik w czasie zmiany roboczej zajmuje się "
+      - "40-godzinny tydzień pracy. Pracownik w czasie tygodnia roboczego zajmuje się "
+
+  wspolne_pola_dla_sekcji:
+    halas_ultradzwiekowy:
+      miejsce:
+        - "Miejsce pomiarów"
+        - "Stanowisko"
+        - "Źródło"
+        - "Czas pomiaru"
+        - "Czas trwania"
+      stanowisko:
+        - "Stanowisko"
+        - "Źródło"
+        - "Czas pomiaru"
+        - "Czas trwania"
+      zrodlo:
+        - "Źródło"
+        - "Czas pomiaru"
+        - "Czas trwania"
+
+    drgania_ogolne:
+      miejsce:
+        - "Miejsce pomiarów"
+        - "Stanowisko"
+        - "Wykonywana czynność"
+        - "Czas ekspozycji [min]"
+        - "Producent urządzenia/maszyny"
+        - "Model"
+        - "Rok produkcji"
+        - "Rodzaj podłoża"
+        - "Obciążenie maszyny"
+        - "Stan opon"
+        - "Typ siedziska"
+        - "Lokalizacja przetwornika drgań"
+      stanowisko:
+        - "Stanowisko"
+        - "Wykonywana czynność"
+        - "Czas ekspozycji [min]"
+        - "Producent urządzenia/maszyny"
+        - "Model"
+        - "Rok produkcji"
+        - "Rodzaj podłoża"
+        - "Obciążenie maszyny"
+        - "Stan opon"
+        - "Typ siedziska"
+        - "Lokalizacja przetwornika drgań"
+      zrodlo:
+        - "Wykonywana czynność"
+        - "Czas ekspozycji [min]"
+        - "Producent urządzenia/maszyny"
+        - "Model"
+        - "Rok produkcji"
+        - "Rodzaj podłoża"
+        - "Obciążenie maszyny"
+        - "Stan opon"
+        - "Typ siedziska"
+        - "Lokalizacja przetwornika drgań"
+        -
+    drgania_miejscowa:
+      miejsce:
+        - "Miejsce pomiarów"
+        - "Stanowisko"
+        - "Wykonywana czynność"
+        - "Czas ekspozycji [min]"
+        - "Producent urządzenia/maszyny"
+        - "Model"
+        - "Rok produkcji"
+      stanowisko:
+        - "Stanowisko"
+        - "Wykonywana czynność"
+        - "Czas ekspozycji [min]"
+        - "Producent urządzenia/maszyny"
+        - "Model"
+        - "Rok produkcji"
+      zrodlo:
+        - "Wykonywana czynność"
+        - "Czas ekspozycji [min]"
+        - "Producent urządzenia/maszyny"
+        - "Model"
+        - "Rok produkcji"
+
+
+  drgania_ogolne:
+    miejsce:
+      kolumny: ["Wartość przyśpieszenia drgań [m/s2]", "Lp.", "1.", "2.", "3.", "4.", "5."]
+      wiersze: ["X", "Y", "Z"]
+    stanowisko:
+      kolumny: ["Wartość przyśpieszenia drgań [m/s2]", "Lp.", "1.", "2.", "3.", "4.", "5."]
+      wiersze: ["X", "Y", "Z"]
+    zrodlo:
+      kolumny: ["Wartość przyśpieszenia drgań [m/s2]", "Lp.", "1.", "2.", "3.", "4.", "5."]
+      wiersze: ["X", "Y", "Z"]
+
+
+  halas_ultradzwiekowy:
+    miejsce:
+      kolumny: ["Pomiar [dB] / lp.", "Pasmo", "10 kHz", "12,5 kHz", "16 kHz", "20 kHz", "25 kHz", "31,5 kHz", "40 kHz"]
+      wiersze:
+        - { numer: "1.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "2.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "3.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "4.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "5.", typy: [ "Leq", "Lmax" ] }
+    stanowisko:
+      kolumny: ["Pomiar [dB] / lp.", "Pasmo", "10 kHz", "12,5 kHz", "16 kHz", "20 kHz", "25 kHz", "31,5 kHz", "40 kHz"]
+      wiersze:
+        - { numer: "1.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "2.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "3.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "4.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "5.", typy: [ "Leq", "Lmax" ] }
+    zrodlo:
+      kolumny: ["Pomiar [dB] / lp.", "Pasmo", "10 kHz", "12,5 kHz", "16 kHz", "20 kHz", "25 kHz", "31,5 kHz", "40 kHz"]
+      wiersze:
+        - { numer: "1.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "2.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "3.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "4.", typy: [ "Leq", "Lmax" ] }
+        - { numer: "5.", typy: [ "Leq", "Lmax" ] }
+
+  halas:
+    miejsce:
+      kolumny: [ "Pomiar: ", "1.", "2.", "3.", "4.", "5.", "6.", "7." ]
+      wiersze:
+        - { numer: "1.", typy: [ "Leq" ] }
+        - { numer: "2.", typy: [ "Lmax" ] }
+        - { numer: "3.", typy: [ "Lcpeak" ] }
+    stanowisko:
+      kolumny: [ "Pomiar:", "1.", "2.", "3.", "4.", "5.", "6.", "7." ]
+      wiersze:
+        - { numer: "1.", typy: [ "Leq" ] }
+        - { numer: "2.", typy: [ "Lmax" ] }
+        - { numer: "3.", typy: [ "Lcpeak" ] }
+    zrodlo:
+      kolumny: [ "Pomiar:", "1.", "2.", "3.", "4.", "5.", "6.", "7." ]
+      wiersze:
+        - { numer: "1.", typy: [ "Leq" ] }
+        - { numer: "2.", typy: [ "Lmax" ] }
+        - { numer: "3.", typy: [ "Lcpeak" ] }
+
+
+  drgania_miejscowe:
+    miejsce:
+      kolumny: [ "Wartość przyśpieszenia drgań [m/s2]", "Lp.", "1.", "2.", "3.", "4.", "5." ]
+      wiersze: [ "X", "Y", "Z" ]
+    stanowisko:
+      kolumny: [ "Wartość przyśpieszenia drgań [m/s2]", "Lp.", "1.", "2.", "3.", "4.", "5." ]
+      wiersze: [ "X", "Y", "Z" ]
+    zrodlo:
+      kolumny: [ "Wartość przyśpieszenia drgań [m/s2]", "Lp.", "1.", "2.", "3.", "4.", "5." ]
+      wiersze: [ "X", "Y", "Z" ]
+
+
+  chemia:
+    miejsce:
+      - "Miejsce pobierania próbek (nazwa hali/pomieszczenia)"
+      - "Nazwa stanowiska pracy"
+      - "Rodzaj wentylacji w pomieszczeniu"
+      - "Ilość pracowników zatrudnionych na stanowisku"
+      - "Czas trwania zmiany roboczej"
+      - "Stosowane środki ochrony indywidualnej"
+      - "Nr użytego wyposażenia"
+      - "Czynności wykonywane na stanowisku"
+      - "Metoda pobierania próbek (zaznaczenie wielokrotne)"
+      - "Czynniki"
+    stanowisko:
+      - "Nazwa stanowiska pracy"
+      - "Rodzaj wentylacji w pomieszczeniu"
+      - "Ilość pracowników zatrudnionych na stanowisku"
+      - "Czas trwania zmiany roboczej"
+      - "Stosowane środki ochrony indywidualnej"
+      - "Nr użytego wyposażenia"
+      - "Czynności wykonywane na stanowisku"
+      - "Metoda pobierania próbek (zaznaczenie wielokrotne)"
+      - "Czynniki"
+    zrodlo:
+      - "Rodzaj wentylacji w pomieszczeniu"
+      - "Ilość pracowników zatrudnionych na stanowisku"
+      - "Czas trwania zmiany roboczej"
+      - "Stosowane środki ochrony indywidualnej"
+      - "Nr użytego wyposażenia"
+      - "Czynności wykonywane na stanowisku"
+      - "Metoda pobierania próbek (zaznaczenie wielokrotne)"
+      - "Czynniki"
+

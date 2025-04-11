@@ -1,0 +1,38 @@
+<TableScreen>:
+    name: "table"
+
+    ScrollView:
+        MDBoxLayout:
+            id: table_container
+            orientation: "vertical"
+            padding: 20
+            spacing: 20
+            size_hint_y: None
+            height: self.minimum_height
+
+            # Tabela zostanie tu dodana
+            BoxLayout:
+                orientation: "vertical"
+                size_hint_y: None
+                height: self.minimum_height
+                padding: [0, 10, 0, 10]
+                spacing: 15
+
+                # Przycisk eksportu do Excela
+                MDFlatButton:
+                    text: "Eksportuj do Excela"
+                    on_release: root.export_to_excel()  # Odwołanie do metody export_to_excel
+                    size_hint_y: None
+                    height: dp(48)
+                    md_bg_color: 0.4, 0.6, 0.4, 1
+                    text_color: 1, 1, 1, 1
+
+                # Tabela (Tabela będzie dynamicznie dodana)
+                ScrollView:
+                    MDBoxLayout:
+                        id: table_content
+                        orientation: "vertical"
+                        padding: 20
+                        spacing: 20
+                        size_hint_y: None
+                        height: self.minimum_height

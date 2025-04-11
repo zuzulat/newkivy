@@ -1,0 +1,329 @@
+<MainScreen>:
+    name: "main"
+    ScrollView:
+        MDBoxLayout:
+            orientation: 'vertical'
+            padding: dp(20)
+            spacing: dp(25)
+            size_hint_y: None
+            height: self.minimum_height
+            canvas.before:
+                Color:
+                    rgba: 0.88, 0.96, 0.8, 1
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            MDBoxLayout:
+                orientation: 'horizontal'
+                spacing: dp(10)
+                size_hint_y: None
+                height: dp(60)
+                Image:
+                    source: "BONUS/logo.png"
+                    size_hint: None, None
+                    size: dp(71), dp(57)
+                MDLabel:
+                    text: "SYSTEM PROTOKOŁÓW"
+                    font_style: "H5"
+                    halign: "left"
+                    valign: "middle"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.3, 0, 1
+
+            MDCard:
+                id: dane_podstawowe_box
+                orientation: "vertical"
+                padding: dp(15)
+                spacing: dp(10)
+                size_hint_y: None
+                height: self.minimum_height
+                radius: [10]
+                md_bg_color: 0.92, 1, 0.92, 1
+
+                MDLabel:
+                    text: "DANE PODSTAWOWE"
+                    bold: True
+                    font_style: "Body1"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.4, 0.2, 1
+
+                MDTextField:
+                    id: nazwa_zakladu
+                    hint_text: "Nazwa zakładu"
+                    mode: "line"
+                    multiline: False
+
+                MDTextField:
+                    id: adres_zakladu
+                    hint_text: "Adres zakładu"
+                    mode: "line"
+                    multiline: False
+
+                MDTextField:
+                    id: numer_zlecenia
+                    hint_text: "Numer zlecenia"
+                    mode: "line"
+                    multiline: False
+
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    spacing: dp(10)
+                    size_hint_y: None
+                    height: dp(60)
+
+                    MDTextField:
+                        id: data_pomiarow
+                        hint_text: "Data pomiarów"
+                        mode: "line"
+                        multiline: False
+
+                    MDTextField:
+                        id: godzina_pomiarow
+                        hint_text: "Godzina pomiarów"
+                        mode: "line"
+                        multiline: False
+
+            MDCard:
+                orientation: "vertical"
+                padding: dp(15)
+                spacing: dp(15)
+                size_hint_y: None
+                height: self.minimum_height
+                radius: [10]
+                md_bg_color: 0.92, 1, 0.92, 1
+
+                MDLabel:
+                    text: "WARUNKI ŚRODOWISKOWE"
+                    bold: True
+                    font_style: "Body1"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.4, 0.2, 1
+                    size_hint_y: None
+                    height: dp(35)
+
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    spacing: dp(10)
+                    size_hint_y: None
+                    height: dp(60)
+
+                    MDLabel:
+                        text: "Przed pomiarami"
+                        theme_text_color: "Custom"
+                        text_color: 0, 0.4, 0.2, 1
+                        size_hint_x: None
+                        width: dp(120)
+
+                    MDTextField:
+                        id: temperatura_before
+                        hint_text: "Temperatura [°C]"
+                        mode: "line"
+
+                    MDTextField:
+                        id: wilgotnosc_before
+                        hint_text: "Wilgotność [%]"
+                        mode: "line"
+
+                    MDTextField:
+                        id: cisnienie_before
+                        hint_text: "Ciśnienie [hPa]"
+                        mode: "line"
+
+                MDBoxLayout:
+                    orientation: "horizontal"
+                    spacing: dp(10)
+                    size_hint_y: None
+                    height: dp(60)
+
+                    MDLabel:
+                        text: "Po pomiarach"
+                        theme_text_color: "Custom"
+                        text_color: 0, 0.4, 0.2, 1
+                        size_hint_x: None
+                        width: dp(120)
+
+                    MDTextField:
+                        id: temperatura_after
+                        hint_text: "Temperatura [°C]"
+                        mode: "line"
+
+                    MDTextField:
+                        id: wilgotnosc_after
+                        hint_text: "Wilgotność [%]"
+                        mode: "line"
+
+                    MDTextField:
+                        id: cisnienie_after
+                        hint_text: "Ciśnienie [hPa]"
+                        mode: "line"
+
+            MDCard:
+                orientation: "vertical"
+                padding: dp(15)
+                spacing: dp(15)
+                size_hint_y: None
+                height: self.minimum_height
+                radius: [10]
+                md_bg_color: 0.92, 1, 0.92, 1
+
+                MDLabel:
+                    text: "UŻYTE WYPOSAŻENIE"
+                    bold: True
+                    font_style: "Body1"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.4, 0.2, 1
+                    size_hint_y: None
+                    height: dp(35)
+
+                MDGridLayout:
+                    cols: 2
+                    spacing: dp(20)
+                    padding: dp(10)
+                    size_hint_y: None
+                    height: self.minimum_height
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        spacing: dp(5)
+                        size_hint_y: None
+                        height: dp(80)
+
+                        MDLabel:
+                            text: "Termohigrobarometr nr T/WZ/22/W"
+                            theme_text_color: "Custom"
+                            text_color: 0, 0.4, 0.2, 1
+                            halign: "center"
+
+                        MDCheckbox:
+                            id: termohigrobarometr_TWZ_22
+                            size_hint: None, None
+                            size: dp(30), dp(30)
+                            pos_hint: {"center_x": 0.5}
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        spacing: dp(5)
+                        size_hint_y: None
+                        height: dp(80)
+
+                        MDLabel:
+                            text: "Termohigrobarometr nr T/WZ/23/W"
+                            theme_text_color: "Custom"
+                            text_color: 0, 0.4, 0.2, 1
+                            halign: "center"
+
+                        MDCheckbox:
+                            id: termohigrobarometr_TWZ_23
+                            size_hint: None, None
+                            size: dp(30), dp(30)
+                            pos_hint: {"center_x": 0.5}
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        spacing: dp(5)
+                        size_hint_y: None
+                        height: dp(80)
+
+                        MDLabel:
+                            text: "Czasomierz T/SP/107/W"
+                            theme_text_color: "Custom"
+                            text_color: 0, 0.4, 0.2, 1
+                            halign: "center"
+
+                        MDCheckbox:
+                            id: czasomierz_TSP_107
+                            size_hint: None, None
+                            size: dp(30), dp(30)
+                            pos_hint: {"center_x": 0.5}
+
+                    MDBoxLayout:
+                        orientation: "vertical"
+                        spacing: dp(5)
+                        size_hint_y: None
+                        height: dp(80)
+
+                        MDLabel:
+                            text: "Czasomierz T/SP/127/W"
+                            theme_text_color: "Custom"
+                            text_color: 0, 0.4, 0.2, 1
+                            halign: "center"
+
+                        MDCheckbox:
+                            id: czasomierz_TSP_127
+                            size_hint: None, None
+                            size: dp(30), dp(30)
+                            pos_hint: {"center_x": 0.5}
+
+
+            MDBoxLayout:
+                spacing: dp(10)
+                size_hint_y: None
+                height: dp(70)
+                MDRaisedButton:
+                    text: "Zatwierdź dane"
+                    icon: "check"
+                    md_bg_color: 0, 0.5, 0.2, 1
+                    text_color: 1, 1, 1, 1
+                    font_size: "16sp"
+                    on_release: root.submit_data()
+                MDRaisedButton:
+                    text: "Wczytaj poprzednie dane"
+                    icon: "restore"
+                    md_bg_color: 0, 0.5, 0.2, 1
+                    text_color: 1, 1, 1, 1
+                    font_size: "16sp"
+                    on_release: root.load_previous_data()
+
+            MDCard:
+                orientation: "vertical"
+                padding: dp(15)
+                spacing: dp(10)
+                size_hint_y: None
+                height: self.minimum_height
+                radius: [10]
+                md_bg_color: 0.92, 1, 0.92, 1
+
+                MDLabel:
+                    text: "WYBIERZ PROTOKÓŁ"
+                    bold: True
+                    font_style: "Body1"
+                    theme_text_color: "Custom"
+                    text_color: 0, 0.4, 0.2, 1
+
+                MDTextField:
+                    id: protokol
+                    text: "Hałas ultradźwiękowy"
+                    mode: "line"
+                    readonly: True
+                    icon_right: "menu-down"
+                    on_focus: if self.focus: app.open_menu()
+
+            MDBoxLayout:
+                spacing: dp(10)
+                size_hint_y: None
+                height: dp(70)
+                MDRaisedButton:
+                    text: "Dodaj pomiar"
+                    icon: "plus"
+                    md_bg_color: 0, 0.5, 0.2, 1
+                    text_color: 1, 1, 1, 1
+                    font_size: "16sp"
+                    on_release: app.add_stanowisko()
+
+                MDRaisedButton:
+                    text: "Dodaj kalibrację"
+                    icon: "plus"
+                    md_bg_color: 0, 0.5, 0.2, 1
+                    text_color: 1, 1, 1, 1
+                    font_size: "16sp"
+                    on_release: app.add_protokol()
+
+                MDRaisedButton:
+                    text: "Zapisz do Excel"
+                    icon: "file-excel"
+                    md_bg_color: 0, 0.5, 0.2, 1
+                    text_color: 1, 1, 1, 1
+                    font_size: "16sp"
+                    on_release: app.save_to_excel()
+

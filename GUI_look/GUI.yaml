@@ -1,0 +1,37 @@
+gui:
+  fields:
+    - label: "Nazwa zakładu:"
+      key: "nazwa_zakladu"
+      width: 40
+    - label: "Adres zakładu:"
+      key: "adres_zakladu"
+      width: 40
+    - label: "Numer zlecenia:"
+      key: "numer_zlecenia"
+      width: 40
+    - label: "Data pomiarów:"
+      key: "data_pomiarow"
+      width: 40
+
+  warunki_srodowiskowe:
+    - label: "Temperatura [°C]:"
+      key: "temperatura"
+      width: 10
+    - label: "Wilgotność [%]:"
+      key: "wilgotnosc"
+      width: 10
+    - label: "Ciśnienie [hPa]:"
+      key: "cisnienie"
+      width: 10
+
+  protokoly:
+    - text: "Hałas ultradźwiękowy"
+      value: "halas_ultradzwiekowy"
+    - text: "Hałas"
+      value: "halas"
+    - text: "Drgania miejscowe"
+      value: "drgania_miejscowe"
+    - text: "Drgania ogólne"
+      value: "drgania_ogolne"
+    - text: "Pobieranie próbek"
+      value: "chemia"
